@@ -1,0 +1,2 @@
+# wordle-netlify
+wordle game
