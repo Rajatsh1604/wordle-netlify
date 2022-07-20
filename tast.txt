@@ -1,0 +1,14 @@
+Focus the current block{
+    //tile.setAttribute("contentEditable", "true");
+    
+    // document
+    //   .getElementById(`guessrow-${guessRowIndex}-tile-${guessCharIndex}`)
+    //   .focus();
+    //tile.setAttribute("focus", " background-color: Aqua");
+}
+
+Show Timer
+
+Ask to enter name & email before starting the game
+
+Save Game details for leaderboard

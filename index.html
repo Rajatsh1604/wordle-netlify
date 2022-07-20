@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wordle-game</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0-alpha.1/axios.min.js"></script>
+  <body>
+    <div class="modal">
+      <div class="modal-content">
+        <form class="modal-content-form" action="#">
+          <h3>Enter Details to Start Game</h3>
+          <input
+            type="text"
+            id="player-name"
+            placeholder="Enter Name"
+            required
+          />
+          <input
+            type="email"
+            id="player-email"
+            placeholder="Enter email id"
+            required
+          />
+          <button type="submit" id="start-game">Start Game</button>
+        </form>
+
+        <span class="close-button">×</span>
+      </div>
+    </div>
+    <div class="game-container">
+      <div class="title-container">
+        <h1>WORDLE GAME</h1>
+      </div>
+      <div class="message-container"></div>
+      <div class="tile-container"></div>
+      <div class="key-container"></div>
+    </div>
+    <div class="timer-container">
+      <p id="game-timer"></p>
+    </div>
+  </body>
+</html>
+<script src="app.js"></script>

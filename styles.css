@@ -1,0 +1,241 @@
+* {
+  color: #ffffff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: black;
+}
+.game-container {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title-container {
+  text-align: center;
+  width: 510px;
+  border: 2px solid #ffffff;
+  background-color: grey;
+  border-radius: 20px;
+}
+
+.key-container {
+  width: 640px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.key-container button {
+  height: 60px;
+  width: 55px;
+  border: none;
+  border-radius: 4px;
+  margin: 4px;
+  background-color: grey;
+}
+.key-container button:nth-child(11) {
+  margin-left: 35px;
+}
+.key-container button:nth-child(20),
+.key-container button:nth-child(28) {
+  width: 90px;
+}
+.tile-container div {
+  display: flex;
+}
+
+.tile-container .tile {
+  display: flex;
+  height: 85px;
+  width: 80px;
+  font-size: xx-large;
+  border: 2px solid white;
+  box-sizing: border-box;
+  border-radius: 4px;
+  background-color: grey;
+  justify-content: center;
+  align-items: center;
+  margin: 2px;
+}
+
+/* modal css start */
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1.1);
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+  display: flex;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+}
+.modal-content h3 {
+  color: grey;
+  /* font-size: x-large; */
+}
+
+.close-button {
+  width: 1.5rem;
+  height: 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  background-color: lightgray;
+}
+
+.close-button:hover {
+  background-color: darkgray;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+/* modal css end */
+
+form.modal-content-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* div:focus {
+  background-color: Aqua;
+} */
+input[type="text"],
+[type="email"] {
+  color: grey;
+  height: 2.2rem;
+  font-size: larger;
+}
+button[type="submit"] {
+  background-color: grey;
+  border: none;
+  height: 2.2rem;
+  font-size: larger;
+}
+
+.tile.flip {
+  animation: 0.5s linear flipping;
+}
+@keyframes flipping {
+  0% {
+    transform: rotateX(0deg);
+  }
+  50% {
+    transform: rotateX(90deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+
+.grey-tile {
+  background-color: silver !important;
+  border: none !important;
+}
+.green-tiles {
+  background-color: green !important;
+  border: none;
+}
+.yellow-tiles {
+  background-color: #cfcf5e !important;
+  border: none;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 645px) {
+  .game-container {
+    gap: 8px;
+  }
+  .tile-container .tile {
+    height: 70px;
+    width: 60px;
+    font-size: x-large;
+    margin: 2px;
+  }
+
+  .title-container {
+    width: 310px;
+  }
+
+  .key-container {
+    width: 540px;
+  }
+
+  .key-container button {
+    height: 50px;
+    width: 45px;
+    margin: 2px;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px) {
+  .game-container {
+    gap: 8px;
+  }
+  .tile-container .tile {
+    height: 60px;
+    width: 53px;
+    font-size: x-large;
+    margin: 2px;
+  }
+
+  .title-container {
+    width: 280px;
+    font-size: small;
+  }
+
+  .key-container {
+    width: 360px;
+    justify-content: center;
+  }
+
+  .key-container button {
+    height: 21px;
+    width: 31px;
+    margin: 1px;
+    font-size: smaller;
+  }
+  .key-container button:nth-child(11) {
+    margin-left: 25px;
+  }
+  .key-container button:nth-child(20),
+  .key-container button:nth-child(28) {
+    width: 57px;
+  }
+}
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+}
